@@ -45,14 +45,14 @@ public class PrimeiroBoleto {
 				sacado.addEndereco(endereco);
 				
 				// Criando o título
-				ContaBancaria contaBancaria = new ContaBancaria(BancosSuportados.BANCO_BRADESCO.create());
+				ContaBancaria contaBancaria = new ContaBancaria(BancosSuportados.BANCOOB.create());
 				contaBancaria.setAgencia(new Agencia(1010, "0"));
 				contaBancaria.setNumeroDaConta(new NumeroDaConta(2020, "0"));
 				contaBancaria.setCarteira(new Carteira(6));
 				
 				Titulo titulo = new Titulo(contaBancaria, sacado, cedente);
 				titulo.setNumeroDoDocumento("101010");
-				titulo.setNossoNumero("12345678901");
+				titulo.setNossoNumero("12345678");
 				titulo.setDigitoDoNossoNumero("P");
 				
 				titulo.setValor(BigDecimal.valueOf(100.23));
@@ -68,7 +68,7 @@ public class PrimeiroBoleto {
 				
 				// Dados do boleto
 				Boleto boleto = new Boleto(titulo);
-				boleto.setLocalPagamento("Pagar preferencialmente no Bradesco");
+				boleto.setLocalPagamento("Pagar preferencialmente no Sicoob");
 				boleto.setInstrucaoAoSacado("Evite multas, pague em dias suas contas.");
 				
 				boleto.setInstrucao1("Após o vencimento, aplicar multa de 2,00% e juros de 1,00% ao mês");
